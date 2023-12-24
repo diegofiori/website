@@ -1,0 +1,141 @@
+/* Global Styles */
+:root {
+    /* These are color variables */
+    --background-color: #f7f8fa;
+    --text-color: #333;
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --card-background: #f9f9f9;
+    --footer-text-color: #858484;
+    --links-color: #3498db;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header Styles */
+header {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-text {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+}
+
+.header-text .tagline {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+
+/* Main Content Styles */
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card {
+    background: var(--card-background);
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+/* Footer Styles */
+footer {
+    background: var(--card-background);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 35px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--links-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .header-text {
+        bottom: -10px;
+        padding: 8px 16px;
+    }
+
+    .header-text h1 {
+        font-size: 2.2em;
+    }
+
+    .header-text .tagline {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-text {
+        bottom: -5px;
+        padding: 5px 10px;
+    }
+
+    .header-text h1 {
+        font-size: 1.8em;
+    }
+
+    .header-text .tagline {
+        font-size: 0.9em;
+    }
+}
