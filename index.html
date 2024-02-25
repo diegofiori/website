@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Fiori - CTO and AI Expert</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Placeholder for top image. Update src attribute to include desired image location -->
+            <img src="assets/diego_pixar.png" alt="Top Banner" style="width: 100%; height: auto; display: block; margin-bottom: 20px;">
+            <h1>Diego Fiori</h1>
+            <p>CTO and AI crafter</p>
+        </header>
+        <!-- Blog Section -->
+        <section id="blog-section">
+            <h2>Featured Writing</h2>
+            <div id="blog-list"></div>
+        </section>
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <!-- Content truncated for brevity -->
+        </section>
+        <footer>
+            <!-- Footer content truncated for brevity -->
+        </footer>
+    </div>
+    <script>
+        // Fetching and rendering blog posts
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const blogList = document.getElementById('blog-list');
+            fetch('/blogs/README.md')
+                .then(response => response.text())
+                .then(text => {
+                    const blogPostElements = marked(text);
+                    blogList.innerHTML = blogPostElements;
+                });
+        });
+    </script>
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Fiori - CTO and AI Expert</title>
     <style>
         body { font-family: Arial, sans-serif; }
         .container { max-width: 900px; margin: auto; padding: 20px; }
